@@ -2595,6 +2595,29 @@ overflow: hidden !important;
     .top-footer {
     padding: 0px 0 0 0;
     }
+
+    /* Estilo para los botones de navegación */
+
+
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.prev, button.next {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin: 5px; /* Espaciado entre los botones */
+}
+
+button.prev:hover, button.next:hover {
+    background-color: #ddd;
 }
 
 

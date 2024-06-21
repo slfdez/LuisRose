@@ -383,36 +383,35 @@
                 <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
                     <div class="owl-carousel owl-theme">
                         <div class="story left">
-                            <h2>Paleta de Colores</h6>
-
+                            <h2>Paleta de Colores</h2>
                             <figure><img src="images/colorPal.png" alt="" class="img-fluid"></figure>
                             <br><br><br>
                             <p style="font-size: large;">Reservamos el blanco para la Novia, también el Fucsia y Lila para las Damas</p>
-                            
-                            
                         </div>
                         <div class="story left">
                             <h2>Mujeres, inspirense con estas imagenes</h2>
                             <figure><img src="images/mujeresVest.png" alt="" class="img-fluid"></figure>
-                            
-                            
                         </div>
                         <div class="story left">
                             <h2>Hombres, inspirense con estas imagenes</h2>
                             <figure><img src="images/hombresVest.png" alt="" class="img-fluid"></figure>
-                            
                         </div>
                         <div class="story left">
                             <h2>NO Definitivos</h2>
-
                             <figure><img src="images/noDefi.png" alt="" class="img-fluid"></figure>
-                            
                         </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="button-container">
+                        <button class="prev">Previo</button>
+                        <button class="next">Siguiente</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     
     
 
@@ -523,6 +522,28 @@
     <script src="js/YouTubePopUp.js"></script>
     <script src="js/template.js"></script>
     <script src="https://kit.fontawesome.com/8c2afe6f8c.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true
+            });
+        
+            $('.next').click(function() {
+                owl.trigger('next.owl.carousel');
+            });
+        
+            $('.prev').click(function() {
+                owl.trigger('prev.owl.carousel', [300]);
+            });
+        });
+        </script>
+        
 
 
 </body>
